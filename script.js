@@ -1,14 +1,9 @@
-emailjs.init("TD4kWAnZRBhPY0-0J");
 /* =============================================
    João Amorim — Portfólio · script.js
-   1. Cursor personalizado (lerp)
-   2. Header scrolled
-   3. Menu mobile
-   4. Reveal ao scroll (IntersectionObserver)
-      + ativa barras de nível da stack
-   5. Ripple no botão
-   6. Validação do formulário
 ============================================= */
+
+/* ── INIT EMAILJS (apenas uma vez) ─────────── */
+emailjs.init("TD4kWAnZRBhPY0-0J");
 
 /* ── SELETORES ─────────────────────────────── */
 const header      = document.getElementById('header');
@@ -20,7 +15,6 @@ const navLinks    = document.querySelectorAll('.nav__link');
 
 /* ══════════════════════════════════════════
    1. CURSOR PERSONALIZADO
-   Ponto azul instantâneo + anel com lerp 0.1
 ══════════════════════════════════════════ */
 const cDot  = document.getElementById('cDot');
 const cRing = document.getElementById('cRing');
@@ -100,10 +94,6 @@ navLinks.forEach(link => {
 
 /* ══════════════════════════════════════════
    4. REVEAL AO SCROLL
-   Adiciona .visible a .reveal e .hero__name--*
-   quando o elemento entra na viewport (12%).
-   Os scards da stack ganham .visible separado
-   para ativar as barras de progresso via CSS.
 ══════════════════════════════════════════ */
 const allReveals = document.querySelectorAll(
   '.reveal, .hero__name--first, .hero__name--last, .scard'
@@ -125,7 +115,6 @@ allReveals.forEach(el => io.observe(el));
 
 /* ══════════════════════════════════════════
    5. RIPPLE NO BOTÃO
-   Posição do clique → CSS vars para o ::before
 ══════════════════════════════════════════ */
 document.querySelectorAll('.btn').forEach(btn => {
   btn.addEventListener('click', e => {
@@ -136,21 +125,20 @@ document.querySelectorAll('.btn').forEach(btn => {
 });
 
 /* ══════════════════════════════════════════
-   6. FORMULÁRIO
-   Validação + envio real com EmailJS
+   6. FORMULÁRIO + EMAILJS
 ══════════════════════════════════════════ */
-
-emailjs.init("TD4kWAnZRBhPY0-0J");
-
 if (contactForm) {
   contactForm.addEventListener('submit', async e => {
     e.preventDefault();
 
-    const name = contactForm.name.value.trim();
-    const email = contactForm.email.value.trim();
+    const name    = contactForm.name.value.trim();
+    const email   = contactForm.email.value.trim();
     const message = contactForm.message.value.trim();
-    const submit = contactForm.querySelector('.btn');
+    const submit  = contactForm.querySelector('.btn');
+    const btnText = submit.querySelector('.btn__text');
+    const original = btnText.textContent;
 
+    /* Validação */
     if (!name || !message) {
       setFeedback('Preencha nome e mensagem.', 'error');
       shake(!name ? 'fname' : 'fmsg');
@@ -163,24 +151,24 @@ if (contactForm) {
       return;
     }
 
-    /* Estado de loading */
-    const btnText = submit.querySelector('.btn__text');
-    const original = btnText.textContent;
+    /* Loading */
     btnText.textContent = 'Enviando...';
     submit.disabled = true;
 
     try {
-      await emailjs.send("service_w4vgcz8", "template_pny26wh", {
-        name: name,
-        email: email,
-        message: message
+      await emailjs.send('service_w4vgcz8', 'template_pny26wh', {
+        name:    name,
+        email:   email,
+        subject: contactForm.subject.value.trim(),
+        message: message,
       });
 
       setFeedback('Mensagem enviada! Responderei em breve.', 'ok');
       contactForm.reset();
+
     } catch (err) {
       setFeedback('Erro ao enviar. Tente novamente.', 'error');
-      console.error(err);
+      console.error('EmailJS error:', err);
     }
 
     btnText.textContent = original;
@@ -199,21 +187,17 @@ function shake(id) {
   if (!document.getElementById('sh-kf')) {
     const s = document.createElement('style');
     s.id = 'sh-kf';
-    s.textContent = `
-      @keyframes sh {
-        0%,100%{transform:translateX(0)}
-        20%{transform:translateX(-5px)}
-        40%{transform:translateX(5px)}
-        60%{transform:translateX(-3px)}
-        80%{transform:translateX(3px)}
-      }
-    `;
+    s.textContent = `@keyframes sh {
+      0%,100%{transform:translateX(0)}
+      20%{transform:translateX(-5px)}
+      40%{transform:translateX(5px)}
+      60%{transform:translateX(-3px)}
+      80%{transform:translateX(3px)}
+    }`;
     document.head.appendChild(s);
   }
-
   const el = document.getElementById(id);
   if (!el) return;
-
   el.style.animation = 'sh 0.38s ease';
   el.addEventListener('animationend', () => el.style.animation = '', { once: true });
 }
