@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>João Amorim — Front-end Developer</title>
+  <meta name="description" content="Crio sites modernos, responsivos e com design profissional.">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <!--
+    Tipografia:
+    · Cormorant Garamond — serif italiana, elegante e editorial
+    · DM Mono           — monospace para labels, stack e código
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Cursor customizado -->
+  <div class="c-dot"  id="cDot"  aria-hidden="true"></div>
+  <div class="c-ring" id="cRing" aria-hidden="true"></div>
+
+  <!-- Linha vertical decorativa -->
+  <div class="page-line" aria-hidden="true"></div>
+
+  <!-- ═══════════ HEADER ═══════════ -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#inicio" class="header__logo" aria-label="Início">JA<span class="logo-dot">.</span></a>
+
+      <nav class="nav" id="nav" aria-label="Navegação principal">
+        <ul class="nav__list">
+          <li><a href="#projetos" class="nav__link">Projetos</a></li>
+          <li><a href="#stack"    class="nav__link">Stack</a></li>
+          <li><a href="#sobre"    class="nav__link">Sobre</a></li>
+          <li><a href="#contato"  class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="hero" id="inicio">
+      <div class="hero__inner">
+
+        <!-- Texto decorativo de fundo -->
+        <span class="hero__bg-word" aria-hidden="true">DEV</span>
+
+        <div class="hero__top">
+          <p class="label reveal">Front-end Developer &amp; Designer</p>
+          <div class="hero__available reveal">
+            <span class="hero__dot-status"></span>
+            <span>Disponível para projetos</span>
+          </div>
+        </div>
+
+        <h1 class="hero__name">
+          <span class="hero__name--first reveal-line">João</span>
+          <span class="hero__name--last reveal-line">Amorim<em>.</em></span>
+        </h1>
+
+        <div class="hero__bottom">
+          <p class="hero__desc reveal">
+            Construo interfaces que unem código limpo<br/>
+            e experiência visual de alto nível.
+          </p>
+          <a href="#projetos" class="hero__scroll reveal" aria-label="Ver projetos">
+            <span class="hero__scroll-text">Ver trabalhos</span>
+            <span class="hero__scroll-arrow" aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+      </div>
+      <div class="hero__rule" aria-hidden="true"></div>
+    </section>
+
+
+    <!-- ═══════════ PROJETOS ═══════════ -->
+    <section class="projects" id="projetos">
+      <div class="projects__header reveal">
+        <p class="label">Trabalhos selecionados</p>
+        <h2 class="section-title">Projetos</h2>
+      </div>
+
+      <ul class="projects__list">
+
+        <!-- ── Projeto 1 ── -->
+        <li class="proj reveal">
+          <a href="https://joaoamorinz0.github.io/Jukira-Pamonharia/" class="proj__link" aria-label="Ver projeto Dashboard Analytics">
+            <div class="proj__meta">
+              <span class="proj__index" aria-hidden="true">01</span>
+              <div class="proj__tags">
+                <span>HTML / CSS / JS</span>
+                <span>2026</span>
+              </div>
+            </div>
+            <div class="proj__body">
+              <h3 class="proj__title">Jukira Pamonharia</h3>
+              <p class="proj__desc">
+                Landing Page Interativa e layout totalmente responsivo. Foco em clareza visual, performance e simplicidade.
+              </p>
+            </div>
+            <span class="proj__cta" aria-hidden="true">Ver projeto →</span>
+          </a>
+        </li>
+
+        <!-- ── Projeto 2 ── -->
+        <li class="proj reveal">
+          <a href=" https://joaoamorinz0.github.io/landing-page-diy/" class="proj__link" aria-label="Ver projeto Landing Page E-commerce">
+            <div class="proj__meta">
+              <span class="proj__index" aria-hidden="true">02</span>
+              <div class="proj__tags">
+                <span>HTML / CSS / Git</span>
+                <span>2026</span>
+              </div>
+            </div>
+            <div class="proj__body">
+              <h3 class="proj__title">DIY Landing Page</h3>
+              <p class="proj__desc">
+                Landing page de Faça Você Mesmo, organizada em todos os detalhes e mudança de tema claro/escuro. Otimizada para conversão e mobile-first.
+              </p>
+            </div>
+           
+            <span class="proj__cta" aria-hidden="true">Ver projeto →</span>
+          </a>
+        </li>
+
+
+      </ul>
+    </section>
+
+
+    <!-- ═══════════ STACK ═══════════ -->
+    <section class="stack" id="stack">
+      <div class="stack__inner">
+
+        <div class="stack__header reveal">
+          <p class="label">Tecnologias &amp; ferramentas</p>
+          <h2 class="section-title">Stack</h2>
+        </div>
+
+        <div class="stack__grid">
+
+          <!-- HTML -->
+          <div class="scard reveal">
+            <div class="scard__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 2L6.4 27.2L16 30L25.6 27.2L28 2H4Z" fill="currentColor" opacity="0.12"/>
+                <path d="M16 4.5V27.5L23.8 25.2L25.8 4.5H16Z" fill="currentColor" opacity="0.18"/>
+                <text x="4" y="22" font-family="monospace" font-size="11" font-weight="700" fill="currentColor">&lt;/&gt;</text>
+              </svg>
+            </div>
+            <h3 class="scard__name">HTML5</h3>
+            <p class="scard__desc">Semântica e estrutura sólida como fundação de todo projeto.</p>
+            <div class="scard__level">
+              <span class="scard__level-bar" style="--w:60%"></span>
+              <span class="scard__level-pct">Intermediário</span>
+            </div>
+          </div>
+
+          <!-- CSS -->
+          <div class="scard reveal">
+            <div class="scard__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 2L6.4 27.2L16 30L25.6 27.2L28 2H4Z" fill="currentColor" opacity="0.12"/>
+                <text x="5" y="22" font-family="monospace" font-size="10" font-weight="700" fill="currentColor">CSS</text>
+              </svg>
+            </div>
+            <h3 class="scard__name">CSS3</h3>
+            <p class="scard__desc">Flexbox, Grid, animações, variáveis e responsividade com mobile-first.</p>
+            <div class="scard__level">
+              <span class="scard__level-bar" style="--w:50%"></span>
+              <span class="scard__level-pct">Intermediário</span>
+            </div>
+          </div>
+
+          <!-- JavaScript -->
+          <div class="scard reveal">
+            <div class="scard__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="28" height="28" rx="2" fill="currentColor" opacity="0.12"/>
+                <text x="5" y="23" font-family="monospace" font-size="12" font-weight="700" fill="currentColor">JS</text>
+              </svg>
+            </div>
+            <h3 class="scard__name">JavaScript</h3>
+            <p class="scard__desc">DOM, eventos e váriaveis.</p>
+            <div class="scard__level">
+              <span class="scard__level-bar" style="--w:35%"></span>
+              <span class="scard__level-pct">Básico</span>
+            </div>
+          </div>
+
+          <!-- Git -->
+          <div class="scard reveal">
+            <div class="scard__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="8"  r="3.5" stroke="currentColor" stroke-width="2.5"/>
+                <circle cx="8"  cy="24" r="3.5" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="24" cy="24" r="3.5" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M8 20.5V14a6 6 0 016-6h6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M20.5 24H11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="scard__name">Git &amp; GitHub</h3>
+            <p class="scard__desc">Controle de versão, branches, pull requests, GitHub Pages e fluxo de trabalho colaborativo.</p>
+            <div class="scard__level">
+              <span class="scard__level-bar" style="--w:40%"></span>
+              <span class="scard__level-pct">Básico</span>
+            </div>
+          </div>
+
+          <!-- Design -->
+          <div class="scard reveal">
+            <div class="scard__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3"  y="3"  width="11" height="11" rx="1.5" fill="currentColor" opacity="0.25"/>
+                <rect x="18" y="3"  width="11" height="11" rx="1.5" fill="currentColor" opacity="0.14"/>
+                <rect x="3"  y="18" width="11" height="11" rx="1.5" fill="currentColor" opacity="0.14"/>
+                <circle cx="23.5" cy="23.5" r="5.5" fill="currentColor" opacity="0.22"/>
+              </svg>
+            </div>
+            <h3 class="scard__name">Design</h3>
+            <p class="scard__desc">Composição visual, tipografia, paletas de cor e criação de componentes com foco em UX.</p>
+            <div class="scard__level">
+              <span class="scard__level-bar" style="--w:42%"></span>
+              <span class="scard__level-pct">Básico</span>
+            </div>
+          </div>
+
+          <!-- Responsivo -->
+          <div class="scard reveal">
+            <div class="scard__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2"  y="6"  width="28" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="12" y="26" width="8"  height="2"  rx="1" fill="currentColor" opacity="0.5"/>
+                <rect x="10" y="10" width="5"  height="10" rx="1" fill="currentColor" opacity="0.18"/>
+                <rect x="17" y="10" width="9"  height="4"  rx="1" fill="currentColor" opacity="0.18"/>
+                <rect x="17" y="16" width="9"  height="4"  rx="1" fill="currentColor" opacity="0.18"/>
+              </svg>
+            </div>
+            <h3 class="scard__name">Responsivo</h3>
+            <p class="scard__desc">Design mobile-first, media queries e testes em múltiplos dispositivos.</p>
+            <div class="scard__level">
+              <span class="scard__level-bar" style="--w:67%"></span>
+              <span class="scard__level-pct">Intermediário</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════ SOBRE ═══════════ -->
+    <section class="about" id="sobre">
+      <div class="about__inner">
+
+        <div class="about__visual reveal">
+       
+          <div class="about__img-ph">
+             <img src="img/eu.jpg" alt="João Amorim" />
+          </div>
+          <div class="about__img-label" aria-hidden="true">João Amorim — Front-end Dev</div>
+        </div>
+
+        <div class="about__text">
+          <p class="label reveal">Sobre mim</p>
+
+          <h2 class="about__title reveal">
+            Código é design.<br/><em>Design é código.</em>
+          </h2>
+
+          <p class="about__desc reveal">
+           Desde pequeno, sempre tive curiosidade em entender como as coisas funcionam — desmontava, testava, criava do meu jeito. Com o tempo, isso virou interesse por design e tecnologia.Hoje, sou desenvolvedor front-end com base sólida em HTML, CSS e JavaScript, e um olhar apurado para o visual. Acredito que a distância entre um site bonito e um site funcional é zero — quando bem feito, um é o outro.
+          </p>
+
+          <p class="about__desc reveal">
+            Trabalho com atenção aos detalhes: tipografia que respira, animações com propósito e código limpo, fácil de manter. Minha experiência em design me permite transformar ideias em interfaces reais sem perder fidelidade.
+          </p>
+
+          <div class="skills reveal">
+            <div class="skills__col">
+              <p class="label">Front-end</p>
+              <ul>
+                <li>HTML5 Semântico</li>
+                <li>CSS3 / Animações</li>
+                <li>JavaScript</li>
+                <li>Git &amp; GitHub</li>
+              </ul>
+            </div>
+            <div class="skills__col">
+              <p class="label">Design</p>
+              <ul>
+                <li>Criação de logos</li>
+                <li>Edição de Perfis Sociais</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════ CONTATO ═══════════ -->
+    <section class="contact" id="contato">
+      <div class="contact__inner">
+
+        <div class="contact__text">
+          <p class="label reveal">Vamos conversar</p>
+          <h2 class="contact__title reveal">
+            Tem um projeto<br/>em mente<em>?</em>
+          </h2>
+          <p class="contact__sub reveal">
+            Estou aberto a freelas, colaborações e oportunidades. Me conta o que você está construindo!
+          </p>
+
+          <!-- Links de contato direto -->
+          <ul class="contact__links reveal">
+            <li>
+              <a href="mailto:jvqa360@gmail.com" class="contact__link">
+                <span class="contact__link-label">E-mail</span>
+                <span class="contact__link-val">jvqa360@gmail.com</span>
+                <span class="contact__link-arr" aria-hidden="true">→</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+5561993014598" class="contact__link">
+                <span class="contact__link-label">Telefone</span>
+                <span class="contact__link-val">(61) 9301-4598</span>
+                <span class="contact__link-arr" aria-hidden="true">→</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/joaoamorinz0" target="_blank" rel="noopener" class="contact__link">
+                <span class="contact__link-label">GitHub</span>
+                <span class="contact__link-val">joaoamorinz0</span>
+                <span class="contact__link-arr" aria-hidden="true">→</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/joaoamorinz" target="_blank" rel="noopener" class="contact__link">
+                <span class="contact__link-label">LinkedIn</span>
+                <span class="contact__link-val">joaoamorinz</span>
+                <span class="contact__link-arr" aria-hidden="true">→</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contactForm" novalidate>
+          <div class="form__row">
+            <div class="form__field">
+              <label for="fname" class="form__label">Nome</label>
+              <input type="text" id="fname" name="name" class="form__input" placeholder="Seu nome" required />
+            </div>
+            <div class="form__field">
+              <label for="femail" class="form__label">E-mail</label>
+              <input type="email" id="femail" name="email" class="form__input" placeholder="seu@email.com" required />
+            </div>
+          </div>
+          <div class="form__field">
+            <label for="fsubject" class="form__label">Assunto</label>
+            <input type="text" id="fsubject" name="subject" class="form__input" placeholder="Front-end, design, outro..." />
+          </div>
+          <div class="form__field">
+            <label for="fmsg" class="form__label">Mensagem</label>
+            <textarea id="fmsg" name="message" class="form__input form__textarea" placeholder="Me conta sobre o projeto..." rows="5" required></textarea>
+          </div>
+          <div class="form__footer">
+            <button type="submit" class="btn">
+              <span class="btn__text">Enviar mensagem</span>
+              <span class="btn__arrow" aria-hidden="true">→</span>
+            </button>
+            <p class="form__feedback" id="feedback" aria-live="polite"></p>
+          </div>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <nav class="footer__social" aria-label="Redes sociais">
+        <a href="https://github.com/joaoamorinz0"           target="_blank" rel="noopener" class="footer__social-link">GitHub</a>
+        <a href="https://www.linkedin.com/in/joaoamorinz"   target="_blank" rel="noopener" class="footer__social-link">LinkedIn</a>
+        <a href="mailto:jvqa360@gmail.com"                                                  class="footer__social-link">E-mail</a>
+      </nav>
+      <a href="#inicio" class="footer__back" aria-label="Voltar ao topo">↑ Topo</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
