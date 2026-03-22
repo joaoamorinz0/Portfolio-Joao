@@ -53,7 +53,7 @@
 /* ── 2. RESET & BASE ─────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 18px; }
 
 body {
   font-family: var(--f-mono);
@@ -120,7 +120,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 /* ── 5. LABELS & UTILITÁRIOS ─────────────────── */
 .label {
   font-family: var(--f-mono);
-  font-size: 0.66rem;
+  font-size: 0.78rem;
   font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -166,7 +166,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
   gap: 0.6rem;
   padding: 0.9rem 2rem;
   font-family: var(--f-mono);
-  font-size: 0.73rem;
+  font-size: 0.85rem;
   font-weight: 400;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -236,7 +236,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 .nav__link {
   font-family: var(--f-mono);
-  font-size: 0.68rem;
+  font-size: 0.8rem;
   font-weight: 400;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -323,7 +323,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
   align-items: center;
   gap: 0.5rem;
   font-family: var(--f-mono);
-  font-size: 0.63rem;
+  font-size: 0.75rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--ink-2);
@@ -346,10 +346,10 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
   display: flex;
   flex-direction: column;
   font-family: var(--f-serif);
-  font-weight: 500;
-  font-size: clamp(5.5rem, 15vw, 14rem);
-  line-height: 0.99;
-  letter-spacing: -0.01em;
+  font-weight: 300;
+  font-size: clamp(5.5rem, 14vw, 14rem);
+  line-height: 0.88;
+  letter-spacing: -0.03em;
   align-self: center;
 }
 
@@ -364,13 +364,13 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  gap: var(--sp-lg);
+  gap: var(--sp-md);
   flex-wrap: wrap;
 }
 
 .hero__desc {
   font-family: var(--f-mono);
-  font-size: 0.76rem;
+  font-size: 0.92rem;
   color: var(--ink-2);
   line-height: 1.95;
   max-width: 38ch;
@@ -381,7 +381,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
   align-items: center;
   gap: 0.5rem;
   font-family: var(--f-mono);
-  font-size: 0.66rem;
+  font-size: 0.78rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--ink-2);
@@ -454,7 +454,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 }
 .proj__tags span {
   font-family: var(--f-mono);
-  font-size: 0.58rem;
+  font-size: 0.72rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink-2);
@@ -475,7 +475,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 .proj__desc {
   font-family: var(--f-mono);
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   color: var(--ink-2);
   line-height: 1.85;
   max-width: 50ch;
@@ -503,7 +503,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
   position: absolute;
   bottom: var(--sp-sm); right: var(--pad);
   font-family: var(--f-mono);
-  font-size: 0.63rem;
+  font-size: 0.75rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--accent);
@@ -571,7 +571,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 .scard__desc {
   font-family: var(--f-mono);
-  font-size: 0.68rem;
+  font-size: 0.82rem;
   color: rgba(244,243,240,0.4);
   line-height: 1.85;
   flex: 1;
@@ -614,7 +614,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 .scard__level-pct {
   font-family: var(--f-mono);
-  font-size: 0.58rem;
+  font-size: 0.7rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: rgba(244,243,240,0.3);
@@ -645,13 +645,9 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 .about__img-ph { aspect-ratio: 3/4; min-height: 0; }
 
-.about__img-ph img {
-  border-radius: var(--sp-sm);
-}
-
 .about__img-label {
   font-family: var(--f-mono);
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--ink-2);
@@ -672,7 +668,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 .about__desc {
   font-family: var(--f-mono);
-  font-size: 0.76rem;
+  font-size: 0.92rem;
   color: var(--ink-2);
   line-height: 1.95;
   max-width: 56ch;
@@ -695,7 +691,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 .skills__col li {
   font-family: var(--f-mono);
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   color: var(--ink-2);
   padding-left: 1rem;
   position: relative;
@@ -732,7 +728,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 .contact__sub {
   font-family: var(--f-mono);
-  font-size: 0.73rem;
+  font-size: 0.88rem;
   color: var(--ink-2);
   line-height: 1.85;
   max-width: 36ch;
@@ -761,7 +757,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 .contact__link-label {
   font-family: var(--f-mono);
-  font-size: 0.58rem;
+  font-size: 0.72rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--ink-2);
@@ -770,7 +766,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 .contact__link-val {
   font-family: var(--f-mono);
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   color: var(--ink);
   flex: 1;
   transition: color var(--dur) var(--ease);
@@ -792,7 +788,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 .form__label {
   font-family: var(--f-mono);
-  font-size: 0.6rem;
+  font-size: 0.72rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--ink-2);
@@ -805,7 +801,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
   border: none;
   border-bottom: 1px solid var(--border);
   font-family: var(--f-mono);
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   color: var(--ink);
   outline: none;
   resize: vertical;
@@ -825,7 +821,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 .form__feedback {
   font-family: var(--f-mono);
-  font-size: 0.66rem;
+  font-size: 0.8rem;
   letter-spacing: 0.1em;
   color: var(--accent);
   min-height: 1.2em;
@@ -852,7 +848,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 .footer__copy {
   font-family: var(--f-mono);
-  font-size: 0.6rem;
+  font-size: 0.72rem;
   letter-spacing: 0.1em;
 }
 
@@ -860,7 +856,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 .footer__social-link {
   font-family: var(--f-mono);
-  font-size: 0.6rem;
+  font-size: 0.72rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: rgba(244,243,240,0.4);
@@ -880,7 +876,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 .footer__back {
   font-family: var(--f-mono);
-  font-size: 0.6rem;
+  font-size: 0.72rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: rgba(244,243,240,0.4);
@@ -961,9 +957,9 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
     pointer-events: auto;
   }
   .nav__list { flex-direction: column; gap: 1.25rem; }
-  .nav__link { font-size: 0.9rem; }
+  .nav__link { font-size: 1.05rem; }
 
-  .hero__name { font-size: clamp(4rem, 18vw, 10rem); }
+  .hero__name { font-size: clamp(4.5rem, 18vw, 10rem); }
   .hero__name--last { padding-left: 5vw; }
 
   .stack__grid { grid-template-columns: 1fr; }
