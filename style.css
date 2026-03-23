@@ -25,7 +25,7 @@
 /* ── 1. TOKENS ──────────────────────────────── */
 :root {
   --bg:       #F4F3F0;       /* off-white ligeiramente frio */
-  --bg-2:     #EBEBЕ8;       /* superfície alternada */
+  --bg-2:     #e8e8e8;       /* superfície alternada */
   --ink:      #18181B;       /* quase-preto */
   --ink-2:    #62616B;       /* texto secundário */
   --border:   #D2D0CC;       /* bordas sutis */
